@@ -6,7 +6,7 @@ import "./ProductCard.scss";
 const ProductCard = ({ item }) => {
   const aaa = useNavigate();
   const showDetail = () => {
-    aaa(`https://my-json-server.typicode.com/hpmp1379/hnm/products/${item.id}`);
+    aaa(`/product/${item.id}`);
   };
   return (
     <div className="productCard">
