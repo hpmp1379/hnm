@@ -16,11 +16,11 @@ const ProductAll = () => {
   const [productsList, setProductsList] = useState([]);
   let [query, setQuery] = useSearchParams(); //주소뒤 파라메터
 
+  // `http://localhost:5000/products?q=${keyword}`;
   const getProducts = async () => {
     let keyword = query.get("q") || "";
     //쿼리값을 읽어 온다,q의 밸류(아이템을 가져온다) / 없을땐 빈 스트링
-    // let url = `https://my-json-server.typicode.com/hpmp1379/hnm/products?q=${keyword}`;
-    let url = `http://localhost:5000/products?q=${keyword}`;
+    let url = `https://my-json-server.typicode.com/hpmp1379/hnm/products?q=${keyword}`;
     //
     let response = await fetch(url);
     let data = await response.json();
